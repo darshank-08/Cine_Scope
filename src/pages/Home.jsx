@@ -59,7 +59,7 @@ const Home = () => {
         </div>
 
         <div className={styles.trend}>
-          {movies.slice(1, 7).map((movie) => (
+          {movies.slice(1,9).map((movie) => (
             <TrendingCard key={movie.id} movie={movie} />
           ))}
         </div>
