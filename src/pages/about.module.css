@@ -1,0 +1,81 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1500&q=80")
+    center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 14, 20, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.content {
+  max-width: 700px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff7f00;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.signature {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff4b4b;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}

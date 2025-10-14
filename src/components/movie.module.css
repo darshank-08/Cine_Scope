@@ -1,0 +1,138 @@
+.trending {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+  z-index: 1; 
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.1) 100%);
+  z-index: -1;
+}
+
+.overlay {
+  max-width: 50%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-family: "inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+.watchBtn {
+  margin-top: 2rem;
+  width: 200px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(0, 123, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.6), 0 0 16px rgba(0, 150, 255, 0.5) inset;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.watchBtn:hover {
+  background: rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.9);
+  transform: translateY(-3px);
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 450px;
+    padding: 2.5rem;
+  }
+  .overlay {
+    max-width: 70%;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trending {
+    width: 95%;
+  }
+  .hero {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .hero::before {
+    background: rgba(0,0,0,0.6);
+  }
+  .overlay {
+    max-width: 100%;
+  }
+  .description {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .trending {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 20px;
+  }
+  .hero {
+    min-height: 400px;
+    padding: 1.5rem;
+    border-radius: 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .watchBtn {
+    width: 180px;
+    height: 44px;
+  }
+}
